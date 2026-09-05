@@ -430,10 +430,10 @@
   },
   "initial_expected_solution": {
     "status": "OPTIMAL",
-    "scheduled_count": 8,
-    "unscheduled_count": 4,
-    "total_priority_scheduled": 6.310,
-    "total_risk_mitigated": 5.600,
+    "scheduled_count": 10,
+    "unscheduled_count": 2,
+    "total_priority_scheduled": 7.870,
+    "total_risk_mitigated": 5.980,
     "scheduled_blocks": [
       {
         "block_id": "BLK-001",
@@ -476,16 +476,6 @@
         "is_committed": false
       },
       {
-        "block_id": "BLK-007",
-        "track_id": "DOWN-1",
-        "start_minute": 690,
-        "end_minute": 810,
-        "work_type": "OHE_MAINTENANCE",
-        "priority_score": 0.850,
-        "risk_score": 0.720,
-        "is_committed": false
-      },
-      {
         "block_id": "BLK-003",
         "track_id": "UP-1",
         "start_minute": 690,
@@ -493,6 +483,26 @@
         "work_type": "OHE_MAINTENANCE",
         "priority_score": 0.880,
         "risk_score": 0.780,
+        "is_committed": false
+      },
+      {
+        "block_id": "BLK-011",
+        "track_id": "DOWN-1",
+        "start_minute": 690,
+        "end_minute": 780,
+        "work_type": "SIGNALLING_INTERLOCKING",
+        "priority_score": 0.440,
+        "risk_score": 0.380,
+        "is_committed": false
+      },
+      {
+        "block_id": "BLK-012",
+        "track_id": "DOWN-1",
+        "start_minute": 780,
+        "end_minute": 840,
+        "work_type": "ROUTINE_INSPECTION",
+        "priority_score": 0.390,
+        "risk_score": 0.310,
         "is_committed": false
       },
       {
@@ -514,24 +524,26 @@
         "priority_score": 0.990,
         "risk_score": 0.890,
         "is_committed": false
+      },
+      {
+        "block_id": "BLK-009",
+        "track_id": "DOWN-1",
+        "start_minute": 1260,
+        "end_minute": 1380,
+        "work_type": "BALLAST_TAMPING",
+        "priority_score": 0.580,
+        "risk_score": 0.510,
+        "is_committed": false
       }
     ],
     "unscheduled_blocks": [
       {
-        "block_id": "BLK-009",
-        "reason": "WINDOW_CAPACITY_EXCEEDED_FOR_EQUIPMENT_CSM_TAMPER_01"
+        "block_id": "BLK-007",
+        "reason": "EQUIPMENT_MUTUAL_EXCLUSION_CONFLICT_WITH_BLK_003"
       },
       {
         "block_id": "BLK-010",
-        "reason": "HEADWAY_AND_TIME_WINDOW_CAPACITY_LIMIT"
-      },
-      {
-        "block_id": "BLK-011",
-        "reason": "LOWER_PRIORITY_IN_COMPETITIVE_WINDOW"
-      },
-      {
-        "block_id": "BLK-012",
-        "reason": "WINDOW_CAPACITY_LIMIT"
+        "reason": "EQUIPMENT_MUTUAL_EXCLUSION_AND_WINDOW_CAPACITY_LIMIT"
       }
     ]
   },
